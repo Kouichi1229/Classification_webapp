@@ -24,7 +24,7 @@ def image_processingVGG19(img):
     model = load_model('./model/VGG19_BUG.h5')
     data=[]
     image = Image.open(img)
-    image = image.resize((30,30))
+    image = image.resize((224,224))
     data.append(np.array(image))
     X_test=np.array(data)
     Y_pred = model.predict_classes(X_test)
@@ -34,7 +34,7 @@ def image_processingInceptionV3(img):
     model = load_model('./model/InceptionV3_bug.h5')
     data=[]
     image = Image.open(img)
-    image = image.resize((150,150))
+    image = image.resize((229,229))
     data.append(np.array(image))
     X_test=np.array(data)
     Y_pred = model.predict_classes(X_test)
@@ -44,7 +44,7 @@ def image_processingDenseNet201(img):
     model = load_model('./model/DenseNet201_bug.h5')
     data=[]
     image = Image.open(img)
-    image = image.resize((30,30))
+    image = image.resize((224,224))
     data.append(np.array(image))
     X_test=np.array(data)
     Y_pred = model.predict_classes(X_test)
