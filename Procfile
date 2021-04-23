@@ -1,0 +1,1 @@
+web: gunicorn Spodopterafrugiperda_app:app 
